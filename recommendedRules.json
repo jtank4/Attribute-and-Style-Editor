@@ -1,0 +1,61 @@
+[
+  {
+    "url": "www.tiktok.com",
+    "notes": "this set of rules adds a volume bar and a time scrub bar to videos on tiktok.com",
+    "elements": [
+      {
+        "selector": "div video.video-player",
+        "setAttributes": {
+          "controls": ""
+        }
+      },
+      {
+        "selector": ".video-card .video-card-mask, .video-card .event-delegate-mask, .video-card .play-button",
+        "setStyles": {
+          "bottom": "40px"
+        }
+      }
+    ]
+  },
+  {
+    "url": "www.instagram.com",
+    "notes": "this set of rules adds a volume bar and a time scrub bar to videos on instagram.com",
+    "elements": [
+      {
+        "selector": "div video",
+        "setAttributes": {
+          "controls": ""
+        }
+      },
+      {
+        "selector": "article div div div div",
+        "hasStyles": {
+          "top":"0px",
+          "right":"0px",
+          "bottom":"0px",
+          "left":"0px",
+          "position":"absolute"
+        },
+        "hasChildren": [
+          "span"
+        ],
+        "setStyles": {
+          "bottom": "40px"
+        }
+      },
+      {
+        "selector": "article div div div div:empty",
+        "hasStyles": {
+          "top":"0px",
+          "right":"0px",
+          "bottom":"0px",
+          "left":"0px",
+          "position":"absolute"
+        },
+        "setStyles": {
+          "bottom": "40px"
+        }
+      }
+    ]
+  }
+]

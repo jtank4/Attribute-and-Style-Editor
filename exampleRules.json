@@ -1,0 +1,41 @@
+[
+  {
+    "url": "www.youtube.com",
+    "notes": "this set of rules breaks the logo in the top left on youtube.com to demonstrate the ability to remove an attribute.",
+    "elements": [
+      {
+        "selector": "svg g g path",
+        "removeAttributes": [
+          "d"
+        ]
+      }
+    ]
+  },
+  {
+    "url": "www.youtube.com/watch?",
+    "notes": "this shows that multiple url's rules can apply on one page. Any youtube video will have the logo destroyed by the previous url's rules, and will have a purple nav bar because of this url's rules.",
+    "elements": [
+      {
+        "selector": "#masthead",
+        "setStyles": {
+		  "background-color":"purple"
+		}
+      }
+    ]
+  },
+  {
+    "url": "www.youtube.com/watch?",
+    "notes": "this shows a use of the notStyles identifier. Any div that doesn't align-items:center on youtube.com videos will be blue",
+    "elements": [
+      {
+        "selector": "div",
+        "notStyles": {
+          "align-items": "center"
+        },
+        "setStyles": {
+		  "background-color":"blue"
+		}
+      }
+    ]
+  }
+]
