@@ -1,16 +1,17 @@
 [
   {
     "url": "www.tiktok.com",
-    "notes": "this set of rules adds a volume bar and a time scrub bar to videos on tiktok.com",
+    "refresh": 1000,
+    "notes": "this set of rules adds a volume bar and a time scrub bar to videos on tiktok.com. It also uses the refresh property to reapply the rules every 5 seconds so newly loaded videos will get the controls.",
     "elements": [
       {
-        "selector": "div video.video-player",
+        "selector": "div > video.video-player",
         "setAttributes": {
           "controls": ""
         }
       },
       {
-        "selector": ".video-card .video-card-mask, .video-card .event-delegate-mask, .video-card .play-button",
+        "selector": "div > div > div > div.video-card .video-card-mask, div > div > div > div.video-card .event-delegate-mask, div > div > div > div.video-card .play-button",
         "setStyles": {
           "bottom": "40px"
         }
@@ -19,16 +20,17 @@
   },
   {
     "url": "www.instagram.com",
+    "refresh": 1000,
     "notes": "this set of rules adds a volume bar and a time scrub bar to videos on instagram.com",
     "elements": [
       {
-        "selector": "div video",
+        "selector": "video",
         "setAttributes": {
           "controls": ""
         }
       },
       {
-        "selector": "article div div div div",
+        "selector": "div > div",
         "hasStyles": {
           "top":"0px",
           "right":"0px",
@@ -44,7 +46,7 @@
         }
       },
       {
-        "selector": "article div div div div:empty",
+        "selector": "div:empty",
         "hasStyles": {
           "top":"0px",
           "right":"0px",

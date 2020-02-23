@@ -15,14 +15,13 @@
 	  "16":"icons/attributeStyleEdit-16.png",
 	  "32":"icons/attributeStyleEdit-32.png"
 	},
+	"default_popup": "popup.html",
+	"browser_style": true,
     "default_title": "Attribute and Style Editor"
   },
   "options_ui": {
 	"page": "options.html",
 	"browser_style": true
-  },
-  "background": {
-	"scripts": ["background.js"]
   },
   "content_scripts": [
     {

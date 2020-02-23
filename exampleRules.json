@@ -1,10 +1,10 @@
 [
   {
     "url": "www.youtube.com",
-    "notes": "this set of rules breaks the logo in the top left on youtube.com to demonstrate the ability to remove an attribute.",
+    "notes": "This set of rules breaks the logo in the top left on youtube.com to demonstrate the ability to remove an attribute.",
     "elements": [
       {
-        "selector": "svg g g path",
+        "selector": "path",
         "removeAttributes": [
           "d"
         ]
@@ -13,7 +13,7 @@
   },
   {
     "url": "www.youtube.com/watch?",
-    "notes": "this shows that multiple url's rules can apply on one page. Any youtube video will have the logo destroyed by the previous url's rules, and will have a purple nav bar because of this url's rules.",
+    "notes": "This shows that multiple url's rules can apply on one page. Any youtube video will have the logo destroyed by the previous url's rules, and will have a purple nav bar because of this url's rules.",
     "elements": [
       {
         "selector": "#masthead",
@@ -25,7 +25,7 @@
   },
   {
     "url": "www.youtube.com/watch?",
-    "notes": "this shows a use of the notStyles identifier. Any div that doesn't align-items:center on youtube.com videos will be blue",
+    "notes": "This shows a use of the notStyles identifier. Any div that doesn't align-items:center on youtube.com videos will be blue",
     "elements": [
       {
         "selector": "div",
@@ -35,6 +35,19 @@
         "setStyles": {
 		  "background-color":"blue"
 		}
+      }
+    ]
+  },
+  {
+    "url": "www.youtube.com/watch?",
+	"tryAgain": 7000,
+    "notes": "This breaks comment profile pictures on youtube videos. It uses the tryAgain property to apply the rules once more 7 seconds after the page loads. You'll need to scroll down to the comment section quickly after the page loads for this to apply. Normally you'd use the refresh property in this case. Note any other site rules that apply to this page will also reapply.",
+    "elements": [
+      {
+        "selector": "img",
+        "removeAttributes": [
+		  "src"
+        ]
       }
     ]
   }
