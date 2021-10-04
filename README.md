@@ -11,11 +11,12 @@ A firefox addon that allows you to change HTML attributes and CSS properties aut
 # Documentation:
 ## Getting started writing rules
 JSON is used to specify rules/what elements will get changed and how. Your rules will be defined as a JSON array:
-<addr>
+```
 [
 ]
-</addr>
+```
 Each individual rule will be an object with some key properties:
+```
 [
   {
     "url": "tumblr.com/",
@@ -23,9 +24,11 @@ Each individual rule will be an object with some key properties:
 	]
   }
 ]
+```
 Each rule must have a url that the rule will run on, and will have an array of elements, each allowing the user to specify various selectors to make sure the addon only changes the desired element, and allowing the user to specify various changes to apply to the element. All selectors will be checked first before the rules/changes are applied.
 
 Adding an element with a selector:
+```
 [
   {
     "url": "tumblr.com/",
@@ -36,7 +39,9 @@ Adding an element with a selector:
 	]
   }
 ]
+```
 This is a simple CSS selector that specifies any video element contained in a div. Now we add something to happen when it finds such a video:
+```
 [
   {
     "url": "tumblr.com/",
@@ -50,6 +55,7 @@ This is a simple CSS selector that specifies any video element contained in a di
 	]
   }
 ]
+```
 This sets the attribute controls on the video to a value of true. On a simpler website that might be enough to get a volume bar where there was not one previously, but Tumblr requires a bit more work. In recommendedRules.json you may find a completed rule that enables volume bars on Tumblr videos.
 
 ##Further documentation
