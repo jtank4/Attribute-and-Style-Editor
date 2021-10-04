@@ -11,8 +11,10 @@ A firefox addon that allows you to change HTML attributes and CSS properties aut
 # Documentation:
 ## Getting started writing rules
 JSON is used to specify rules/what elements will get changed and how. Your rules will be defined as a JSON array:
+<addr>
 [
 ]
+</addr>
 Each individual rule will be an object with some key properties:
 [
   {
