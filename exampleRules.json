@@ -1,5 +1,24 @@
 [
   {
+    "url": "www.tiktok.com",
+    "refresh": 1000,
+    "notes": "this set of rules adds a volume bar and a time scrub bar to videos on tiktok.com. It also uses the refresh property to reapply the rules every second so newly loaded videos will get the controls. Unfortunately tiktok now has some javascript constantly resetting the volume, so this is useless even though the bar can be interacted with. It now only serves as an example.",
+    "elements": [
+      {
+        "selector": "div > video.video-player, div > video.video",
+        "setAttributes": {
+          "controls": "true"
+        }
+      },
+      {
+        "selector": "DIV>DIV.play-button.theme, DIV>SPAN.event-delegate-mask, DIV>DIV.coverBox",
+        "setStyles":{
+          "display":"none"
+        }
+      }
+    ]
+  },
+  {
     "url": "www.youtube.com",
     "notes": "This set of rules breaks the logo in the top left on youtube.com to demonstrate the ability to remove an attribute.",
     "elements": [

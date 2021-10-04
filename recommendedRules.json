@@ -1,27 +1,8 @@
 [
   {
-    "url": "www.tiktok.com",
+    "url": "www.instagram.com/",
     "refresh": 1000,
-    "notes": "this set of rules adds a volume bar and a time scrub bar to videos on tiktok.com. It also uses the refresh property to reapply the rules every 5 seconds so newly loaded videos will get the controls.",
-    "elements": [
-      {
-        "selector": "div > video.video-player",
-        "setAttributes": {
-          "controls": ""
-        }
-      },
-      {
-        "selector": "div > div > div > div.video-card .video-card-mask, div > div > div > div.video-card .event-delegate-mask, div > div > div > div.video-card .play-button",
-        "setStyles": {
-          "bottom": "40px"
-        }
-      }
-    ]
-  },
-  {
-    "url": "www.instagram.com",
-    "refresh": 1000,
-    "notes": "this set of rules adds a volume bar and a time scrub bar to videos on instagram.com",
+    "notes": "This set of rules adds a volume bar and a time scrub bar to videos on instagram.com",
     "elements": [
       {
         "selector": "video",
@@ -56,6 +37,56 @@
         },
         "setStyles": {
           "bottom": "40px"
+        }
+      }
+    ]
+  },
+  {
+    "url": "https://www.tumblr.com/video",
+	"notes": "This set of rules adds a volume bar and a time scrub bar to videos on tumblr.com",
+    "elements": [
+      {
+        "selector": "video",
+        "setAttributes": {
+          "controls": "true",
+          "preload": "auto",
+          "poster": ""
+        }
+      },
+      {
+        "selector": ".vjs-big-play-button",
+        "setStyles": {
+          "display": "none"
+        }
+      },
+      {
+        "selector": ".vjs-control-bar",
+        "setStyles": {
+          "display": "none"
+        }
+      },
+      {
+        "selector": "div.vjs-poster",
+        "setStyles": {
+          "display": "none",
+          "width": "0px"
+        }
+      }
+    ]
+  },
+  {
+    "url": "tumblr.com/",
+    "notes": "Adds controls to audio on Tumblr including volume bar.",
+    "elements": [
+      {
+        "selector": "div.audio-player > audio",
+        "setAttributes": {
+          "controls": "true"
+        },
+        "setStyles": {
+          "display": "block",
+          "position": "absolute",
+          "top": "60px"
         }
       }
     ]
