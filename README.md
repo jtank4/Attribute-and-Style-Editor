@@ -58,7 +58,7 @@ This is a simple CSS selector that specifies any video element contained in a di
 ```
 This sets the attribute controls on the video to a value of true. On a simpler website that might be enough to get a volume bar where there was not one previously, but Tumblr requires a bit more work. In recommendedRules.json you may find a completed rule that enables volume bars on Tumblr videos.
 
-##Further documentation
+## Further documentation
 Identifiers: You can check for specific computed styles by defining a property on the element level called hasStyles. Give it a value of an object with properties of the styles you want to check for. You can specify your element does not have specific properties or that they don't have certain values using notStyles. You can make sure an element has a child by defining the property hasChildren with a value of an array. Each element of the array should be a string that is a valid CSS selector (you can put ":scope > " before your selector to specify it must be a direct child of the element). You can make sure an element has specific attributes using default css selector mechanics (see: https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors) (which would go in the normal selector property).
 
 Other features:
