@@ -20,8 +20,8 @@ Each individual rule will be an object with some key properties:
 [
   {
     "url": "tumblr.com/",
-	"elements": [
-	]
+    "elements": [
+    ]
   }
 ]
 ```
@@ -32,11 +32,11 @@ Adding an element with a selector:
 [
   {
     "url": "tumblr.com/",
-	"elements": [
-	  {
-	    "selector": "div > video"
-	  }
-	]
+    "elements": [
+      {
+        "selector": "div > video"
+      }
+    ]
   }
 ]
 ```
@@ -45,14 +45,14 @@ This is a simple CSS selector that specifies any video element contained in a di
 [
   {
     "url": "tumblr.com/",
-	"elements": [
-	  {
-	    "selector": "div > video",
-		"setAttributes": {
-		  "controls": "true"
-		}
-	  }
-	]
+    "elements": [
+      {
+        "selector": "div > video",
+        "setAttributes": {
+          "controls": "true"
+        }
+      }
+    ]
   }
 ]
 ```
