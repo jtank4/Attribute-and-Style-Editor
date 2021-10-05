@@ -43,7 +43,8 @@
   },
   {
     "url": "https://www.tumblr.com/video",
-	"notes": "This set of rules adds a volume bar and a time scrub bar to videos on tumblr.com",
+    "tryAgain": 1000,
+    "notes": "This set of rules adds a volume bar and a time scrub bar to videos on tumblr.com",
     "elements": [
       {
         "selector": "video",
@@ -54,13 +55,13 @@
         }
       },
       {
-        "selector": ".vjs-big-play-button",
+        "selector": "div.vjs-big-play-button",
         "setStyles": {
           "display": "none"
         }
       },
       {
-        "selector": ".vjs-control-bar",
+        "selector": "div.vjs-control-bar",
         "setStyles": {
           "display": "none"
         }

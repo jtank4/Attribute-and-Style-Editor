@@ -4,9 +4,9 @@ A firefox addon that allows you to change HTML attributes and CSS properties aut
 # Getting started:
 1. Download the addon from the Firefox add on store.
 2. Left click on the add ons icon, and select the Define rules button from the popup.
-3. I recommend taking the rules from the recommendedRules.json file in this repository, pasting them into the rules text area, and clicking the Save button below the rules text area.
+3. I recommend taking the rules from the rules/recommendedRules.json file in this repository, pasting them into the rules text area, and clicking the Save button below the rules text area.
 4. These recommended rules add controls (time scrub bar, volume bar) to videos on instagram.com and tiktok.com.
-5. They are also a good starting point for you to create your own rules. Some features I couldn't find a use case for, so they've been featured in the exampleRules.json file in this repository which I don't recommend you actually use, but that you take a look at if you need more clarification than the documentation below provides.
+5. They are also a good starting point for you to create your own rules. Some features I couldn't find a use case for, so they've been featured in the rules/exampleRules.json file in this repository which I don't recommend you actually use, but that you take a look at if you need more clarification than the documentation below provides.
 
 # Documentation:
 ## Getting started writing rules
@@ -66,3 +66,6 @@ For websites that load more content after the page is loaded, you can put either
 
 Other usage notes:
 The notes property you see in the recommendedRules and exampleRules isn't a special property or reserved word; rather, you're just allowed to put any extra properties you want in your rules and it won't be a problem unless they are one of the reserved words of the add on like hasChildren, hasStyles, etc. or if it is invalid JSON. The validity of your JSON is checked when saving rules and if invalid you will be warned and given details below the save button.
+
+Getting checksum:
+This addon will be uploaded with every file zipped into Attribute-and-Style-Editor.zip except any preexisting Attribute-and-Style-Editor.zip, the rules folder, and the .git folder.
