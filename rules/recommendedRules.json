@@ -77,7 +77,7 @@
   },
   {
     "url": "tumblr.com/",
-    "notes": "Adds controls to audio on Tumblr including volume bar.",
+    "notes": "Adds controls to audio on Tumblr including volume bar. Some test pages, each has a different kind of player.    https://schrodingers-cate.tumblr.com/post/665572195066593280/pcddiva-mua-swurvedcords-13-years-later-this    https://lizardhats.tumblr.com/post/664057999294382080/geeksofdoom-gusman-69-wumblr-vengabus",
     "elements": [
       {
         "selector": "div.audio-player > audio",
@@ -85,9 +85,38 @@
           "controls": "true"
         },
         "setStyles": {
+          "position": "relative",
           "display": "block",
-          "position": "absolute",
-          "top": "60px"
+          "top": "30px",
+          "left": "-120px"
+        }
+      },
+      {
+        "selector": "div.audio-info",
+        "setStyles": {
+          "overflow": "visible"
+        }
+      },
+      {
+        "selector": "div.playercon",
+        "setStyles": {
+          "width": "min-content",
+          "height": "min-content"
+        }
+      },
+      {
+        "selector": "div.player",
+        "setStyles": {
+          "width": "min-content",
+          "height": "min-content",
+          "overflow": "visible"
+        }
+      },
+      {
+        "selector": "iframe.tumblr_audio_player",
+        "setStyles": {
+          "width": "inherit",
+          "height": "min-content"
         }
       }
     ]
