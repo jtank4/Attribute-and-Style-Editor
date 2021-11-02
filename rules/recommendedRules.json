@@ -42,6 +42,40 @@
     ]
   },
   {
+    "url": "https://twitter.com",
+    "refresh": 1000,
+    "notes": "this set of rules adds a volume bar and a time scrub bar to videos on twitter.com",
+    "elements": [
+      {
+        "selector": "video",
+        "setAttributes": {
+          "controls": ""
+        }
+      },
+      {
+        "selector": "div > div[tabIndex='0']",
+        "hasStyles": {
+          "top":"0px",
+          "right":"0px",
+          "bottom":"0px",
+          "left":"0px",
+          "position":"absolute",
+          "z-index":"0",
+          "flex-direction":"column",
+          "display":"flex",
+          "box-sizing":"border-box",
+          "align-items":"stretch"
+        },
+        "hasChildren": [
+          "div"
+        ],
+        "setStyles": {
+          "display": "none"
+        }
+      }
+    ]
+  },
+  {
     "url": "https://www.tumblr.com/video",
     "tryAgain": 1000,
     "notes": "This set of rules adds a volume bar and a time scrub bar to videos on tumblr.com",
