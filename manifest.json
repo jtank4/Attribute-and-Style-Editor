@@ -2,7 +2,7 @@
 
   "manifest_version": 2,
   "name": "Attribute and Style Editor",
-  "version": "0.1.2",
+  "version": "0.1.3",
 
   "description": "Allows you to define rules that automatically add or change html attributes or css styles for elements you specify in a website.",
 
