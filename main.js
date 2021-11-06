@@ -85,9 +85,8 @@ function main(items, url){
 }
 
 function loadRules(){
-	browser.storage.local.get({"rules":""})
-		.then(items => main(items, document.location.href));
+	chrome.storage.local.get({"rules":""}, (items) => main(items, document.location.href));
 }
 
 window.addEventListener("load", loadRules);
-browser.runtime.onMessage.addListener(request => {if(request == "applyRules"){loadRules()}});
+chrome.runtime.onMessage.addListener(request => {if(request == "applyRules"){loadRules()}});

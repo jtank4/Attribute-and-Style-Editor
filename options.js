@@ -1,5 +1,5 @@
 function setup(){
-	browser.storage.local.get({"rules":"[]"}).then(items => document.getElementById("rulesBox").value = items.rules);
+	chrome.storage.local.get({"rules":"[]"}, (items) => document.getElementById("rulesBox").value = items.rules);
 	document.getElementById("save").addEventListener("click", saveRules);
 }
 
@@ -13,7 +13,7 @@ function saveRules(){
 	catch(err){
 		errBox.innerText = String(err);
 	}
-	browser.storage.local.set({"rules":rules});
+	chrome.storage.local.set({"rules":rules});
 }
 
 window.addEventListener("load", setup);

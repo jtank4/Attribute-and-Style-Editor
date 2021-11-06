@@ -1,6 +1,6 @@
 function setup(){
 	document.getElementById("apply").addEventListener("click", applyRules);
-	document.getElementById("options").addEventListener("click", () => browser.runtime.openOptionsPage());
+	document.getElementById("options").addEventListener("click", () => chrome.runtime.openOptionsPage());
 }
 
 function onError(err){
@@ -9,7 +9,7 @@ function onError(err){
 
 function sendApplyRules(tabs){
 	for (let tab of tabs) {
-		browser.tabs.sendMessage(
+		chrome.tabs.sendMessage(
 			tab.id,
 			"applyRules"
 		).catch(onError);
@@ -17,7 +17,7 @@ function sendApplyRules(tabs){
 }
 
 function applyRules(){
-	browser.tabs.query({
+	chrome.tabs.query({
 		currentWindow: true,
 		active: true
 	}).then(sendApplyRules).catch(onError);
