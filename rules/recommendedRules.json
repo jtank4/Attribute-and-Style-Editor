@@ -1,8 +1,8 @@
 [
   {
-    "url": "www.instagram.com/",
+    "url": "www.instagram.com",
     "refresh": 1000,
-    "notes": "This set of rules adds a volume bar and a time scrub bar to videos on instagram.com",
+    "notes": "this set of rules adds a volume bar and a time scrub bar to videos on instagram.com",
     "elements": [
       {
         "selector": "video",
@@ -23,7 +23,7 @@
           "span"
         ],
         "setStyles": {
-          "bottom": "40px"
+          "pointer-events": "none"
         }
       },
       {
@@ -36,7 +36,13 @@
           "position":"absolute"
         },
         "setStyles": {
-          "bottom": "40px"
+          "pointer-events": "none"
+        }
+      },
+      {
+        "selector": "video + img",
+        "setStyles": {
+          "pointer-events": "none"
         }
       }
     ]
