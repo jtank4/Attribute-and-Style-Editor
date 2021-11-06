@@ -4,7 +4,7 @@
   "name": "Attribute and Style Editor",
   "version": "0.1.2",
 
-  "description": "Allows you to define rules that automatically add, change, or remove html attributes and add or change css properties for elements you specify in a website.",
+  "description": "Allows you to define rules that automatically add or change html attributes or css styles for elements you specify in a website.",
 
   "icons": {
     "48": "icons/attributeStyleEdit-48.png",
