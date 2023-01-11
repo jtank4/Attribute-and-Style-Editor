@@ -120,7 +120,7 @@
     "notes": "Adds controls to audio on Tumblr including volume bar. Some test pages, each has a different kind of player.    https://schrodingers-cate.tumblr.com/post/665572195066593280/pcddiva-mua-swurvedcords-13-years-later-this    https://lizardhats.tumblr.com/post/664057999294382080/geeksofdoom-gusman-69-wumblr-vengabus   https://avafaid.tumblr.com/post/179664195160/maxofs2d",
     "elements": [
       {
-        "selector": "div.audio-player > audio",
+        "selector": "div[role=\"button\"][aria-label=\"Play\"] ~ audio",
         "setAttributes": {
           "controls": "true"
         },
@@ -128,7 +128,8 @@
           "position": "relative",
           "display": "block",
           "top": "30px",
-          "left": "-120px"
+          "left": "-120px",
+          "pointer-events": "all"
         }
       },
       {
