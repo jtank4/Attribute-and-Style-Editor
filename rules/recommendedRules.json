@@ -11,7 +11,7 @@
         }
       },
       {
-        "selector": "div > div",
+        "selector": "video + div > div",
         "hasStyles": {
           "top":"0px",
           "right":"0px",
@@ -19,9 +19,6 @@
           "left":"0px",
           "position":"absolute"
         },
-        "hasChildren": [
-          "span"
-        ],
         "setStyles": {
           "pointer-events": "none"
         }
