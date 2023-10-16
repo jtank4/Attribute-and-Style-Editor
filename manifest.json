@@ -3,7 +3,12 @@
   "manifest_version": 3,
   "name": "Attribute and Style Editor",
   "version": "0.1.4",
-  "id": "630f4550-e061-4b97-9f5b-51ebcc34ff34",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "630f4550-e061-4b97-9f5b-51ebcc34ff34"
+    }
+  },
+
 
   "description": "Allows you to define rules that automatically add or change html attributes or css styles for elements you specify in a website.",
 
