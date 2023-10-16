@@ -72,8 +72,16 @@ function findElsAndApplyChanges(siteRules){
 }
 
 function main(items, url){
-	let rules = JSON.parse(items.rules);
-	console.log("Parsed rules successfully");
+	//once that bug is fixed use this function def instead: function main(items, funs, url){
+	console.log(items);
+	let rules;
+	try{
+		rules = JSON.parse(items.rules);
+		console.log("Parsed rules successfully");
+	}catch(e){
+		rules = [];
+		console.log(e);
+	}
 	let siteRules = rules.filter(site => url.includes(site.url));
 	let refreshedSites = siteRules.filter(site => !isNaN(site.refresh));
 	if(refreshedSites.length > 0){
@@ -85,9 +93,43 @@ function main(items, url){
 }
 
 function loadRules(){
-	browser.storage.local.get({"rules":""})
-		.then(items => main(items, document.location.href));
+	//https://bugzilla.mozilla.org/show_bug.cgi?id=1803950
+	//I'll be able to use the dynamic import below once the above bug is fixed. As as recap:
+	//I want to avoid duplication of code by using a functions file
+	//I could include the functions file in the context script section and use the functions fine here no problem,
+	//but only if they don't have the export statements in the functions file, because those are not allowed in a
+	//non module context. So then I can't do the normal import in the popup.js
+	//So the right way to do it, it seems, is to do the export and use a dynamic import() which works in a non
+	//module context. However because of the above bug, the dynamic import tries to import it from whatever site
+	//you're on instead of from the addon's files.
+	/*
+	Promise.all([browser.storage.local.get({"rules":""}), import("./functions.js")]).then( 
+		values => main(values[0], values[1], document.location.href)
+	);
+	You also need to put this in the manifest below icons
+	"web_accessible_resources": [
+    {
+      "resources": ["./functions.js"],
+	  "matches": ["<all_urls>"]
+    }
+  ],
+  
+	
+	*/
+	console.log("Loaded, ASE is now loading rules");
+	browser.storage.local.get({"rules":""}).then( 
+		items => main(items, document.location.href)
+	);
 }
 
+console.log("Attribute and Style Editor main.js is working");
 window.addEventListener("load", loadRules);
+if(document.readyState == "complete"){
+	console.log("Document was already loaded ASE is removing onload event listener");
+	window.removeEventListener("load", loadRules);
+	loadRules();
+}
+else{
+	console.log("Document was not yet loaded, onload event will trigger ASE");
+}
 browser.runtime.onMessage.addListener(request => {if(request == "applyRules"){loadRules()}});

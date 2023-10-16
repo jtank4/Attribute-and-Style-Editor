@@ -5,7 +5,7 @@ A firefox addon that allows you to change HTML attributes and CSS properties aut
 1. Download the addon from the Firefox add on store.
 2. Left click on the add ons icon, and select the Define rules button from the popup.
 3. I recommend taking the rules from the rules/recommendedRules.json file in this repository, pasting them into the rules text area, and clicking the Save button below the rules text area.
-4. These recommended rules add controls (time scrub bar, volume bar) to videos on instagram.com and tiktok.com.
+4. These recommended rules add controls (time scrub bar, volume bar) to videos on instagram.com and tiktok.com, but as of update 0.1.4 the addon has upgraded to manifest v3 which means you will need to enable it for each site you define rules for. If you are not seeing a rule execute, click on the extensions puzzle piece icon in the top right, then on the gear next to this addon's icon. Finally, select "Always allow on \<the site you are on will appear here\>". Alternately, if you want to disable it for a site, do the same steps but choose "Only when clicked" instead.
 5. They are also a good starting point for you to create your own rules. Some features I couldn't find a use case for, so they've been featured in the rules/exampleRules.json file in this repository which I don't recommend you actually use, but that you take a look at if you need more clarification than the documentation below provides.
 
 # Documentation:

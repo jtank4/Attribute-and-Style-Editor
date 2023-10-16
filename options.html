@@ -2,17 +2,24 @@
 <html>
 	<head>
 		<style>
+			.col {
+				display:flex;
+				flex-direction:column;
+			}
+			.cell {
+				flex: 1;
+			}
 			.rulesBox {
 				width:50%;
 				height:50%;
 			}
 		</style>
 	</head>
-	<body id="body">
-		Rules:
-		<textarea id="rulesBox" class="rulesBox" rows="30" cols="350"></textarea>
-		<button id="save">Save</button>
-		<p id="errBox"></p>
+	<body id="body" class="col">
+		<p class="cell">Rules:</p>
+		<textarea id="rulesBox" class="cell rulesBox" rows="30" cols="350"></textarea>
+		<button id="save" class="cell">Save</button>
+		<p id="errBox" class="cell"></p>
 	</body>
 	<script src="options.js"></script>
 </html>
