@@ -114,7 +114,11 @@
   },
   {
     "url": "tumblr.com/",
-    "notes": "Adds controls to audio on Tumblr including volume bar. Some test pages, each has a different kind of player.    https://schrodingers-cate.tumblr.com/post/665572195066593280/pcddiva-mua-swurvedcords-13-years-later-this    https://lizardhats.tumblr.com/post/664057999294382080/geeksofdoom-gusman-69-wumblr-vengabus   https://avafaid.tumblr.com/post/179664195160/maxofs2d",
+    "notes": "Adds controls to audio and video on Tumblr including volume bar. Some test pages, each has a different kind of player.
+https://schrodingers-cate.tumblr.com/post/665572195066593280/pcddiva-mua-swurvedcords-13-years-later-this   
+https://lizardhats.tumblr.com/post/664057999294382080/geeksofdoom-gusman-69-wumblr-vengabus  
+https://avafaid.tumblr.com/post/179664195160/maxofs2d
+https://www.tumblr.com/childhoodgrave/72587116542445158",
     "elements": [
       {
         "selector": "button[type=\"button\"][aria-label=\"Play\"] ~ audio",
@@ -181,6 +185,20 @@
         "selector": "div.audio-player",
         "setStyles": {
           "background-color": "rgba(242,242,242,0)"
+        }
+      },
+      {
+        "selector": "video",
+        "setAttributes": {
+          "controls": "true",
+          "preload": "auto",
+          "poster": ""
+        }
+      },
+      {
+        "selector": "video ~ div",
+        "setStyles": {
+          "display": "none"
         }
       }
     ]
